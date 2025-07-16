@@ -6,15 +6,15 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			if (arr.length < 2) {
-				return "Infinity";
-			}
+			// Write your code here
+			if (arr.length < 2) return -Infinity;
 
 			let max = -Infinity;
 			let second = -Infinity;
 
 			for (let i = 0; i < arr.length; i++) {
-				let num = arr[i];
+				let num = Number(arr[i]);
+
 				if (num > max) {
 					second = max;
 					max = num;
@@ -23,7 +23,7 @@
 				}
 			}
 
-			return second === -Infinity ? "Infinity" : second;
+			return second === -Infinity ? -Infinity : second;
 		}
 
 		function Main() {
